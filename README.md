@@ -6,46 +6,47 @@
  - Python 3.7.2
  - Flask 2.0.1
 
-### o clone o repositorio
+#### o clone o repositorio
 ```
     $ git clone https://github.com/Semicheche/teste-api-wiki.git
 ```
-### crie o ambiente virtual
+#### crie o ambiente virtual
 ```
     $ python3 -m venv venv
+    $ . venv/bin/activate
 ```
-### Instale os requirements
+#### Instale os requirements
 ```
    $ pip install -r requirements.txt
 ```
 
-### Rodando o projeto
+#### Rodando o projeto
 ```
     $ python src/app.py
 ```
 
-# Endpoints
+## Endpoints API
 
-## consultar CEP
+### consultar CEP
   | Codigo HTTP |URL                                                  |
   |-------------|-----------------------------------------------------|
   |  GET        | http://localhost:5000/consulta-cep?cep=numero-cep |
 
-### output
+#### output
 ```
     { "rua": "<nome-rua>", "cidade": "<nome-cidade>", "estado": "<sigla>" }
 ```
-## Conversao Temperatura
+### Conversao Temperatura
   | Codigo HTTP |URL                                                  |
   |-------------|-----------------------------------------------------|
   |  POST        | http://localhost:5000/converte                     |
 
-### input
+#### input
 ```
     { "UnidadeOrigem": "C", "UnidadeDestino": "F", "Valor": 22 }
 ```
 
-### output
+#### output
 ```
 { "ValorConvertido": 71.6 }
 ```
